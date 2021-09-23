@@ -10,6 +10,9 @@ app.use(express.urlencoded({extended:false}))
 app.use(cors({
     origin: '*'
 }))
+app.use(cors({
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 
 const controleEditora = require('./controladores/editoras')
 const controleLivro = require('./controladores/livros')
