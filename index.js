@@ -7,12 +7,7 @@ const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(cors({
-    origin: '*'
-}))
-app.use(cors({
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}));
+app.use(cors())
 
 const controleEditora = require('./controladores/editoras')
 const controleLivro = require('./controladores/livros')
